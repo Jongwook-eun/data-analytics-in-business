@@ -1,3 +1,5 @@
+#censored data_tobit모델
+
 #task 1
 library(censReg)
 data = read.csv("Mobile_data_usage.csv",header=T)
@@ -34,3 +36,4 @@ abline(h=coef(lm.res)[2],lty=2) #그냥 선형회귀는 marginaleffect를 그냥
 
 margEff(tobit.res,c(1,10,1)) #1은 y절편(intercept), 2.5는 x값 => x값 작을떄는 0에 가깝고
 margEff(tobit.res,c(1,2000,1)) #x값 클때는 1에 가까워짐
+
