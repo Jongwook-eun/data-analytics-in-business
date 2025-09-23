@@ -1,3 +1,5 @@
+# linearmodels_간단서머리추출
+
 data = read.csv("usedcars.csv",header=T)
 str(data)
 data <- data[,-c(1,2)]
@@ -7,9 +9,6 @@ summary(lm.res)
 yhat = fitted(lm.res) #예측
 yhat
 resid(lm.res)
-
-
-
 
 
 mydata = read.csv("advertising.csv",header=T)
@@ -41,3 +40,4 @@ alpha = 1-0.95
 qt(1-alpha/2,df) #q function of t distribution, ttest의 cutoff 구하기 ->percentage&자유도 넣음
 
 qnorm(1-alpha/2)
+
