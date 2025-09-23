@@ -1,3 +1,5 @@
+#linear model_predictive
+
 data = read.csv("usedcars2.csv",header=T)
 str(data)
 data <-data [,c(-1,-2,-7,-9,-10)]
@@ -51,4 +53,5 @@ preds <- predict(
 )
 
 # 5) 산점도 위에 예측 곡선 추가
+
 lines(km.grid, preds, lwd = 3)
