@@ -1,3 +1,5 @@
+#count data: poisson model & negative binomial model(overdispersion(과산포)있을시)
+
 mydata =read.csv("Forum_Posts.csv")
 
 library(MASS)
@@ -41,4 +43,5 @@ points(k,p1) #poisson model거 추가비교
 legend('topright',c('poisson','negative binomial'),pch=c(1,16))
 
 #cf) 만약 데이터셋이 과산포가 있어도, 기대값(평균)만관심있다면 포아송모델 걍써도됨(nb model굳이안쓰고)
+
 #=> 분산값이 평균보다커도(과산포있어도) 포아송모델의 평균추정치(MLE)는 일관성있음
