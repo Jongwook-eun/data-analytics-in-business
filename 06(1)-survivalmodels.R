@@ -1,3 +1,6 @@
+#데이터 형태가 Binary Response 및 Time Information 있을때: Survival/Duration analysis 사용
+#Case of Positive Duration Dependence (시간갈수록 상태변할확률↑)
+
 #install.packages("survival") 
 library(survival) 
 mydata =read.csv("Bank_Attrition.csv") 
@@ -53,5 +56,6 @@ hist(mydata$ChurnTime[mydata$Censored==0],breaks=50,freq=FALSE, add=TRUE, col=NU
 
 #histogram of actual durations observed in the data를 통해 (히스토그램)
 #probability of observing durations in different lenses를 추정할수있음 (종모양함수)
+
 
 
