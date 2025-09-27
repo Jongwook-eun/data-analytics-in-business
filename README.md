@@ -1,4 +1,4 @@
-## Data Analytics in Business
+## 📁 Data Analytics in Business
 Georgia Tech Master of Science in Analytics — MGT 6203 (2025 Revamped Version)
 
 ---
