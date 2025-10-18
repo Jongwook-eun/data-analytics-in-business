@@ -1,3 +1,5 @@
+#Response가 세개이상일때(multimonimal) >> Multinomial logistic regression(다중로지스틱 회귀) 이용
+
 #install.packages("mlogit") #multinomial logit모듈
 library(mlogit)
 mydata = read.csv("Commute_Mode.csv") #mode열이 4개의 response임 (multinomial)
@@ -50,4 +52,5 @@ effects(ml.res, covariate='time',data=xval)
 
 # 이케이스에서는  simple model specification (only consider a common Beta coefficient for all alternatives) 라서 symmetric matrix지만 
 # 보통 model에서는 Beta coefficients are allowed to be alternative specific,
+
 # >> not necessary for the marginal effect of j on j prime to be the same as that of j prime on j
