@@ -1,3 +1,5 @@
+#endogeneity(내생성) 문제있을때 >> IV(Instrumental Variable, 도구변수) 이용
+
 #install.packages("AER")
 library(AER)
 mydata = read.csv("Education_data.csv")
@@ -55,4 +57,5 @@ cbind(coef(ols.res),coef(TSLS.res))
 #2SLS로 내생성(endogeneity)을 제거하니 교육의 임금 효과가 실제로 더 큼이 드러남.
 
 #추측해보자면 “능력이 낮은 사람들이 그 약점을 메우기 위해 더 오래 공부한다"거나, 
+
 # “부모의 사회적 자본이 낮은 사람이 교육을 더 받아야만 성공할 수 있다.” 등의 경우때문에 교육과 오차항이 음(-)의 상관이었던듯
