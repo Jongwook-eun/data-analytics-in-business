@@ -1,4 +1,4 @@
-# Cluster Analysis
+# Cluster Analysis >> K-means와 Hierarchical Clustering
 # Data : Utilities
 
 mydata = read.csv("Utilities.csv") #sales / fuelcost 만 실습목적으로 이용
@@ -103,3 +103,4 @@ plot(mydata,col=cutree(hc.res.single,k=4), pch=20,main="Hierarchical Clustering 
 text(mydata,labels=row.names(mydata),col=cutree(hc.res.single,k=4),pos=1,offset=0.3,cex=0.5)
 plot(mydata,col=cutree(hc.res.centroid,k=4), pch=20,main="Hierarchical Clustering (Centroid Linkage)")
 text(mydata,labels=row.names(mydata),col=cutree(hc.res.centroid,k=4),pos=1,offset=0.3,cex=0.5)
+
