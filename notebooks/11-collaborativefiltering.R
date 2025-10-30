@@ -1,3 +1,7 @@
+# Aassociation Detection 중 Association Rules & Collaborative Filtering 존재 (unsupervised learning)
+# CF에는 UBCF(userbased) 와 IBCF(itembased) 방식 존재
+# UBCF는 자신의 평점들을 demean 이후, 다른 user간 similiarity 구하고, 해당 유사도들을 weight로삼아 다른 user의 평점을 가중평균해서 산출하는 방식
+
 #install.packages("recommenderlab")
 library(recommenderlab)
 
@@ -15,3 +19,4 @@ myrating <- as(myrating, "realRatingMatrix")
 rec.ub <- Recommender(MovieLense, "UBCF") #User-based Collaborative Filtering을 recommender object로
 pred.ub <- predict(rec.ub, myrating, n=10, type="topNList") #prediction중 가장높은 영화 10개만 추천
 as(pred.ub,"list") #top 10 recommendations custom-made only for you
+
