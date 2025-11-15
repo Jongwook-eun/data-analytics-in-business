@@ -1,6 +1,6 @@
+## LSA (latent semantic analysis)
 ## apply the basic back of words approach to perform text mining analysis,
 ## and to use the LSA analysis to reduce dimensionality and extract semantic concepts.
-## LSA (latent semantic analysis)
 # LSA는 TF-IDF 기반 문서–단어 행렬에 SVD를적용 > 문서의 잠재의미구조를 추출하고 차원축소하는 기법
 # >> 텍스트 데이터를 supervised learning 등에서 활용 가능한 정형 feature로 변환하는 데 사용
 
@@ -14,11 +14,14 @@ library(lsa)
 textdata <- read.csv("Ads.csv")
 dim(textdata)
 corp <- Corpus(DataframeSource(textdata[,1:2]))
-
 #labeling outcome variable 
 label <- textdata[,3]
 
-#text preprocessing >> words를 tokens(terms)으로 만듬 
+## 만약 실습파일로 작업하고싶다면(zipfile) 아래와 같이 가져오고, label작업은 auto category(첫번째 1000개) as 1 / electronics category(그다음1000개) as 0 
+#corp <- Corpus(ZipSource("AutoElectronics.zip",recursive=T)) 
+#label <- c(rep(1,1000),rep(0,1000)) 
+
+## text preprocessing >> words를 tokens(terms)으로 만듬 
 corp <- tm_map(corp,stripWhitespace) 
 corp <- tm_map(corp,removePunctuation) 
 corp <- tm_map(corp,removeNumbers) 
@@ -97,5 +100,6 @@ yhat[pred<0.5] <- 0
 confusion <- table(yhat, test.data$label) 
 confusion 
 sum(diag(confusion)) / sum(confusion) 
+
 
 #vsave(lsa.tfidf, file="lsa_posts.Rda")
