@@ -1,3 +1,4 @@
+## ★가장재밌으면서 실생활에 다방면활용할수있는파트(textmining의 토픽 모델링)
 ## LDA (latent Dirichlet allocation analysis)
 ## topic modeling 과 LDA분석은 큰 규모의 데이터를 해석/이해하는데 큰 도움
 ## topic modeling and LDA analysis are very useful methods to help us quickly gain an understanding of a large volume of text documents.are very useful methods to help quickly gain an understanding of a large volume of text documents.
@@ -118,3 +119,4 @@ wordcloud(names(top.term.prob), top.term.prob, random.order = FALSE)
 # 8번 topic
 top.term.prob <- sort(beta[8,], decreasing=TRUE)[1:50]
 wordcloud(names(top.term.prob), top.term.prob, random.order = FALSE)
+
