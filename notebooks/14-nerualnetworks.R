@@ -1,3 +1,6 @@
+## 뉴럴네트워크를 R로 구현(hidden layer 1개버전+2개버전, 벤치마크로 로지스틱회귀와 예측정확성비교)
+## nn은 각 variable과 상관성해석이어렵지만 예측정확도는 높음. 로지스틱회귀는 해석은가능하지만 예측정확도가 낮음 ("prediction accuracy" 와 "interpretability"간 tradeoff)
+
 #install.packages("neuralnet") 
 library(neuralnet) 
 
@@ -84,7 +87,7 @@ confusion <-table(pred.class, data.test$Up)
 sum(diag(confusion)) / sum(confusion)
 #nn은 54%정확성
 
-#save(nn, file="Smarket_nn3.Rda")
+#save(nn, file="Smarket_nn3.Rda") >> 결과 저장하고싶으면이용
 
 ## [3] logistic regression 결과와 비교(benchmark)
 logit.res <- glm(Up~., data=data.train, family=binomial(link=logit))
@@ -99,6 +102,3 @@ logit.pred[logit.pred.prob>0.5] <- TRUE
 confusion <-table(logit.pred, data.test$Up)
 sum(diag(confusion)) / sum(confusion)
 #logistic regression은 51.6%정확성
-
-#nn은 각 variable과 상관성해석이어렵지만 예측정확도는 높음. 로지스틱회귀는 해석은가능하지만 예측정확도가 낮음
-#"prediction accuracy 와 interpretability의 tradeoff"
