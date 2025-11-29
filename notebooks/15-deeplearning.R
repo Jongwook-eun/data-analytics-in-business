@@ -1,4 +1,4 @@
-## CNN (Convolutional-pooling cycle(convolution-relu activation-max pooling)통해 이미지label예측)
+## CNN (Convolutional-pooling cycle(convolution-relu activation-max pooling)통해 이미지 label 예측)
 
 #install.packages("torch")
 #install.packages("luz")
@@ -122,3 +122,4 @@ matrix(labels[cat.indx], 5,5, byrow=TRUE)
 
 cat.indx <- pred.class[wrong.list[1:25]]
 matrix(labels[cat.indx], 5,5, byrow=TRUE)
+
