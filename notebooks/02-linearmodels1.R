@@ -13,7 +13,7 @@ resid(lm.res)
 
 mydata = read.csv("advertising.csv",header=T)
 head(mydata)
-attach(mydata) #이거가지고 작업하겠다 설정
+#attach(mydata) #이거가지고 작업하겠다 설정 > 필요없음
 lm.res = lm(sales~TV+radio+newspaper,mydata) #linear model
 lm.res
 names(lm.res)
