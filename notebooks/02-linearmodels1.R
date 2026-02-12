@@ -27,7 +27,7 @@ yhat = fitted(lm.res) #예측
 yhat
 uhat = resid(lm.res) #잔차 예측
 uhat
-cbind(TV, radio, newspaper, sal+es, yhat, uhat)[1:10,]
+cbind(TV, radio, newspaper, sales, yhat, uhat)[1:10,]
 
 bhat = lm.sum$coefficients[,1]
 se = lm.sum$coefficients[,2]
